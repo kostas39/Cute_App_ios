@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var message: String = "Please touch on one of the animal icons"
     @State private var messageColor: Color = .black
-    @State private var showClearButton: Bool = false // Track visibility of the Clear Text button
+    @State private var showClearButton: Bool = false 
 
     var body: some View {
         VStack {
@@ -19,7 +19,7 @@ struct ContentView: View {
                 Button(action: {
                     message = "You clicked on the cute dog!"
                     messageColor = .pink
-                    showClearButton = true // Make the Clear Text button visible
+                    showClearButton = true
                 }) {
                     Image("shiba_inu")
                         .resizable()
@@ -32,7 +32,7 @@ struct ContentView: View {
                 Button(action: {
                     message = "You clicked on the capybara!"
                     messageColor = .brown
-                    showClearButton = true // Make the Clear Text button visible
+                    showClearButton = true
                 }) {
                     Image("capybara")
                         .resizable()
@@ -44,8 +44,8 @@ struct ContentView: View {
 
             Spacer()
 
-            // Message label and Clear Text button closer together
-            VStack(spacing: 20) { // Adjust spacing as needed
+          
+            VStack(spacing: 20) {
                 Text(message)
                     .font(.title2)
                     .foregroundColor(messageColor)
@@ -56,20 +56,20 @@ struct ContentView: View {
                     Button(action: {
                         message = "Please touch on one of the animal icons"
                         messageColor = .black
-                        showClearButton = false // Hide the Clear Text button
+                        showClearButton = false
                     }) {
                         Text("Clear Text")
                             .font(.headline)
                             .foregroundColor(.white)
                             .padding()
-                            .frame(maxWidth: .infinity, minHeight: 50)
-                            .background(messageColor) // Use messageColor for the button's background
-                            .cornerRadius(5)
+                            .frame(maxWidth: 200, minHeight: 50)
+                            .background(messageColor)
+                            .cornerRadius(25)
                             .padding(.horizontal)
                     }
                 }
             }
-            .padding(.bottom, 20) // Optional padding to create space before cats
+            .padding(.bottom, 20)
 
             // Group of cats button
             Spacer()
@@ -77,7 +77,7 @@ struct ContentView: View {
             Button(action: {
                 message = "You clicked on the group of cute cats!"
                 messageColor = .blue
-                showClearButton = true // Make the Clear Text button visible
+                showClearButton = true
             }) {
                 Image("group_of_cats")
                     .resizable()
