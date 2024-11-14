@@ -63,7 +63,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .padding()
                             .frame(maxWidth: .infinity, minHeight: 50)
-                            .background(Color.blue)
+                            .background(messageColor) // Use messageColor for the button's background
                             .cornerRadius(5)
                             .padding(.horizontal)
                     }
